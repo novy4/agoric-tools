@@ -21,12 +21,12 @@ terraform.tfvars
 * profile       = "sandbox"   # your aws profile from ~/.aws/credentials
 
 ### Instruction
-1 Navigate to terraform directory
-2 Edit variables file terraform.tfvars 
-3 run *terraform init* to initialize modules
-4 run *terraform apply* to run the configuration
-5 type *yes* when prompted
-6 enjoy the action :-)
+* Navigate to terraform directory
+* Edit variables file terraform.tfvars 
+* run *terraform init* to initialize modules
+* run *terraform apply* to run the configuration
+* type *yes* when prompted
+* enjoy the action :-)
 
 ### How it works
 * You registers an account in AWS and choose your prefered region. 
