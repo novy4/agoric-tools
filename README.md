@@ -21,8 +21,20 @@ terraform.tfvars
 * profile       = "sandbox"   # your aws profile from ~/.aws/credentials
 
 ### Instruction
-- Navigate to terraform directory
-- Edit variables file terraform.tfvars 
-- run *terraform init* to initialize modules
-- run *terraform apply* to run the configuration
-- press *yes* when apply changes
+1 Navigate to terraform directory
+2 Edit variables file terraform.tfvars 
+3 run *terraform init* to initialize modules
+4 run *terraform apply* to run the configuration
+5 type *yes* when prompted
+6 enjoy the action :-)
+
+### How it works
+* You registers an account in AWS and choose your prefered region. 
+* You creates or import the ssh key for future use
+* You change the parameters listed above
+* You run commands listed above
+* Terraform creates a VPC network with private and public subnets
+* After VPC is created terraform creates ec2 instance with additional 50GB disk volume for agoric blockchain data directory
+* In addition to instance creation, 3 security groups should be created to allow ingress traffic for port 22, 26656 and 26660
+* After instance is create, terraform will run provision script to install software dependencies and agoric node binaries
+* When terraform finishes the installation job you can ssh to host with user ubuntu and check the sync status with *journalctl -u ag-chain-cosmos.service -f*
